@@ -1,0 +1,14 @@
+CROSS_HOST="x86_64-w64-mingw32"
+ORIG_PN="phodav"
+inherit cross gnome2
+
+NAME="mingw64-x86_64-libphodav1.0"
+VERSION=0.4
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="WebDAV server implementation for Win64 toolchain"
+DESCRIPTION="WebDAV server implementation using libsoup"
+HOMEPAGE="https://wiki.gnome.org/phodav"
+
+CYGCONF_ARGS="--disable-static"
+MAKEOPTS+=" dist_systemdunit_DATA= dist_udevrules_DATA= bin_PROGRAMS= sbin_PROGRAMS= man1_MANS="
